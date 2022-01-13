@@ -8,6 +8,6 @@ COPY ./initdb-postgres.sh /docker-entrypoint-initdb.d/99_dumploader.sh
 COPY ./sigterm-trap.sh /usr/local/bin/sigterm-trap.sh
 
 # Overwrite the entrypoint to get our sigterm trap running.
-ENTRYPOINT ["sigterm-trap.sh"]
+ENTRYPOINT ["/usr/local/bin/sigterm-trap.sh"]
 STOPSIGNAL SIGINT
 CMD ["postgres"]
