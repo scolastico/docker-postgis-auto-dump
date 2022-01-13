@@ -15,7 +15,7 @@ services:
       - ./:/dump/
 # If needed the 'normal database' mode can be activated by uncommenting the next line
 #      - ./database:/var/lib/postgresql/data
-      environment:
+    environment:
       POSTGRES_USER: 'user'
       POSTGRES_PASSWORD: 'password'
       POSTGRES_DB: 'database'
